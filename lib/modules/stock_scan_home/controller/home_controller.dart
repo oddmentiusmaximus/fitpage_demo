@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 
-import '../../../routes/app_pages.dart';
 import '../model/stock_scan_model.dart';
 import '../repository/stock_scan_repo.dart';
 
@@ -35,9 +34,5 @@ class StockScanHomeController extends GetxController {
     } else {
       // Handle other cases or errors here if needed.
     }
-  }
-
-  navigateToCriteria({required int index}) {
-    Get.toNamed(Routes.criteriaView, arguments: {'indexOfSection': index});
   }
 }

@@ -3,6 +3,7 @@ import 'package:fitpage/modules/utils/color_parser.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controller/home_controller.dart';
 
 class StockScanHome extends GetView<StockScanHomeController> {
@@ -18,6 +19,9 @@ class StockScanHome extends GetView<StockScanHomeController> {
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(child: CircularProgressIndicator());
+              } else if (controller.stockScanList.isEmpty) {
+                return const Text(
+                    "Something Went Wrong Please Try Again Later!");
               }
               return Card(
                 color: Colors.black,
@@ -41,7 +45,10 @@ class StockScanHome extends GetView<StockScanHomeController> {
                               decorationColor: Colors.white,
                               color:
                                   ColorParser.getColor(scanModel.color ?? ''))),
-                      onTap: controller.navigateToCriteria(index: index),
+                      onTap: () {
+                        Get.toNamed(Routes.criteriaView,
+                            arguments: {'indexOfSection': index});
+                      },
                     );
                   },
                   separatorBuilder: (BuildContext context, int index) {

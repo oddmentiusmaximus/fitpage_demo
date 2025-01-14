@@ -26,7 +26,7 @@ class CriteriaView extends GetView<StockScanHomeController> {
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Card(
-              color: Colors.black,
+              color: Theme.of(context).cardColor,
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Column(
@@ -38,7 +38,7 @@ class CriteriaView extends GetView<StockScanHomeController> {
                       height: 60,
                       width: Get.width,
                       child: ColoredBox(
-                        color: const Color(0xff1686B0),
+                        color: Theme.of(context).primaryColor,
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Column(
@@ -49,8 +49,7 @@ class CriteriaView extends GetView<StockScanHomeController> {
                               Text(
                                 controller.stockScanList[indexOfSection].name ??
                                     '',
-                                style: textTheme.titleMedium
-                                    ?.copyWith(color: Colors.white),
+                                style: textTheme.titleMedium,
                               ),
                               Text(
                                   controller

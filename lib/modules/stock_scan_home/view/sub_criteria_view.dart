@@ -27,7 +27,7 @@ class SubCriteriaView extends StatelessWidget {
       case SubCriteriaType.valueType:
         final valuesList = variableData['values'] as List;
         return Scaffold(
-          backgroundColor: Colors.black,
+          backgroundColor: Theme.of(context).backgroundColor,
           appBar: AppBar(
             title: const Text(
               "Sub Criteria View ",
@@ -75,7 +75,7 @@ class SubCriteriaView extends StatelessWidget {
         final String title = variableData['study_type'];
         final String parameterName = variableData['parameter_name'];
         return Scaffold(
-            backgroundColor: Colors.black,
+            backgroundColor: Theme.of(context).backgroundColor,
             appBar: AppBar(
               title: const Text(
                 "Sub Criteria View ",

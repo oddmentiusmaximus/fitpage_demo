@@ -17,7 +17,7 @@ class PlainTextSection extends StatelessWidget {
     return criteriaList.length == 1 || criteriaList.last == criteriaList[index]
         ? Text(
             criteriaList[index].text ?? '',
-            style: const TextStyle(color: Colors.white),
+            style: textTheme.bodyLarge,
           )
         : Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -25,11 +25,11 @@ class PlainTextSection extends StatelessWidget {
             children: [
               Text(
                 criteriaList[index].text ?? '',
-                style: const TextStyle(color: Colors.white),
+                style: textTheme.bodyLarge,
               ),
               Text(
                 'and',
-                style: textTheme.labelSmall?.copyWith(color: Colors.white),
+                style: textTheme.labelSmall,
               )
             ],
           );

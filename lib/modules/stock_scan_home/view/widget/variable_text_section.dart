@@ -51,8 +51,8 @@ class VariableTextSection extends StatelessWidget {
                   Get.toNamed(Routes.subCriteriaView,
                       arguments: {"selectedData": variableData});
                 },
-              style: const TextStyle(
-                color: Color(0xff551A8B),
+              style: textTheme.bodyLarge?.copyWith(
+                color: Theme.of(context).colorScheme.secondary,
                 decoration: TextDecoration.underline,
               ),
             ));
@@ -68,8 +68,8 @@ class VariableTextSection extends StatelessWidget {
                     Get.toNamed(Routes.subCriteriaView,
                         arguments: {"selectedData": variableData});
                   },
-                style: const TextStyle(
-                  color: Color(0xff551A8B),
+                style: textTheme.bodyLarge?.copyWith(
+                  color: Theme.of(context).colorScheme.secondary,
                   decoration: TextDecoration.underline,
                 ),
               ));
